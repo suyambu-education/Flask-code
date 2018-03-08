@@ -1,0 +1,67 @@
+<html>
+<style>
+   h1   {color: pink;    font-family: courier;    font-size: 160%;}
+   h2   {color: red;}
+
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+</style>
+<title>Online Accreditation System</title>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+ 
+  <li><a class="active" href="/login">Login</a></li>
+      <li><a href="/college">View College Details</a></li>
+	<li><a href="/vtimetable">View Staff Timetable</a></li>
+  <li><a href="/ctimetable">View College wise Timetable</a></li>
+  <li><a href="/vevents">View Accreditation Details</a></li>
+</ul>
+<body background="/static/home.jpg">
+<tr>
+<td><form method="post" action="/ct_reports">		
+<center><h3><p class="pgtophead rti changefont title-header" id="missng">College Wise Timetable</p></h3><br><br>
+College Name:
+<select id="ctrSubDropDownLong" class="notranslate" size="1" title="Select College" name="cmp_ref_num">
+	     <option value="1">A.J.K. College of Arts and Science, Coimbatore</option>
+	    <option value="2">Angappa College of Arts and Science, Coimbatore</option>
+		   <option value="3">Avinashilingam University for Women (Avinashilingam Institute for Home Science and Higher Education for Women), Coimbatore</option>
+	    <option value="4">Bishop Ambrose College, Coimbatore</option>
+		 <option value="5">C.M.S. College of Science and Commerce, Coimbatore</option>
+	    <option value="6">C.S.I. Bishop Appasamy College of Arts and Science, Coimbatore</option>
+		   <option value="7">Cherran College For Women, Tirupur</option>		   
+	    <option value="8">C.B.M. College Sakethapuri, Coimbatore</option>
+		   <option value="9">Chikkanna Government Arts College, Coimbatore</option>
+	    <option value="10">Dr. G.R. Damodaran College of Science, Coimbatore</option>
+		   <option value="11">Dr. N.G.P. Arts and Science College, Coimbatore</option>
+	    <option value="12">Dr. R.V. Arts and Science College, Coimbatore</option>
+		   <option value="13">Dr. S.N.S. Rajalakshmi College of Arts and Science, Coimbatore</option>		   
+	    <option value="14">Govt. Arts College (Autonomous), Coimbatore</option>
+		   <option value="15">Govt. Arts College, Udumalpet</option>
+	    <option value="16">Hindusthan College of Arts and Science, Coimbatore</option>
+		   <option value="17">K.G. College of Arts and Science, Coimbatore</option>
+	    <option value="18">K.S.G. College of Arts and Science, Coimbatore</option>
+		 <option value="19">Kongunadu Arts and Science College, Coimbatore</option>
+		   <option value="20">L.R.G. Govt. Arts College for Women, Tiruppur</option>
+		   		   <option value="21">Maharaja Arts and Science College, Coimbatore</option>
+	    <option value="22">Nallamuthu Gounder Mahalingam College (Autonomous), Pollachi</option>
+			    <option value="23">Nehru College of Arts and Science, Tirupur</option>
+		   <option value="24">Nirmala College for Women, Coimbatore</option>
+		   <option value="25">Pioneer College of Arts and Science, Coimbatore</option>
+		   <option value="26">P.S.G. College of Arts and Science (Autonomous), Coimbatore</option>
+		   <option value="27">P.S.G.R. Krishnamal College for Women, Coimbatore</option>
+	     <option value="28">Sankara College of Science and Commerce, Coimbatore</option>
+			<option value="29">Sri G.V.G. Visalakshi College for Women (Autonomous), Udumalpet</option>
+		   <option value="30">Sri Ramakrishna Mission Vidyalaya College of Arts and Science (Autonomous), Coimbatore</option>
+	    <option value="31">Thavathiru Santhalinga Adigallar Arts and Science, Coimbatore</option>
+	      <option value="32">V.L.B. Janakiammal College of Arts and Science, Coimbatore</option>
+		   
+		   
+	</select>
+
+<br><br>
+<button type="submit">View</button><br><br></center></form>
+</td>
+</body>
+</html>

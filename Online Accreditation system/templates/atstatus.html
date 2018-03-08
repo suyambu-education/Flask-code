@@ -1,0 +1,54 @@
+<html>
+<style>
+   h1   {color: pink;    font-family: courier;    font-size: 160%;}
+   h2   {color: red;}
+     div  {background: url("/static/2.jpg");   background-size:cover;  background-repeat: no-repeat;}
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+</style>
+<title>Online Accreditation System</title>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+ 
+  <li><a class="active" href="/login">Login</a></li>
+       <li><a href="/college">View College Details</a></li>
+  <li><a href="/vtimetable">View Staff Timetable</a></li>
+  <li><a href="/ctimetable">View College wise Timetable</a></li>
+  <li><a href="/vevents">View Accreditation Details</a></li>
+</ul>
+<body background="/static/home.jpg">
+<tr>
+<td>
+<center><h3><p class="pgtophead rti changefont title-header" id="missng">Staffwise Timetable</p></h3><br><br>
+</td>
+
+
+<table class="table" width =100% border="1">
+
+			
+					<tbody>
+						<tr>
+						<h1><th>Staff ID</th><th>Name</th><th>Date of Exam</th><th>Semester</th><th>Year</th><th>Subject</th><th>Duration</th><th>University</th><th>College</th></h1>
+						</tr>
+						{% for sid in timetable%}
+					<tr>
+					  
+					     <td >{{ sid.sid}}</td>
+					  <td >{{ sid.name}}</td>
+					    <td >{{ sid.tdate}}</td>
+					   <td >{{ sid.dorder}}</td>
+					     <td >{{ sid.syear}}</td>
+					       <td >{{ sid.subject}}</td>
+					         <td >{{ sid.shour}}</td>					  
+					  <td >{{ sid.university}}</td>					  
+					  <td >{{ sid.college}}</td>
+					  
+									  
+					 </tr>
+				{% endfor %}
+			</tbody>
+			</table>
+</body>
+</html>

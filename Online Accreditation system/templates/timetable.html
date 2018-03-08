@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   h1   {color: pink;    font-family: courier;    font-size: 160%;}
+   h2   {color: red;}
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+</style>
+<head>
+<meta charset="utf-8" />
+<title>Online Accreditation System</title>
+<meta name="generator" content="Geany 1.28" />
+</head>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+    <li><a href="/acollege">View College Details</a></li>
+ <li><a href="/staff">Staff Management</a></li>
+    <li><a href="/timetable">Timetable Generation</a></li>
+   <li><a href="/events">Accreditation Details</a></li>
+    <li><a href="/staffreport">Staff Report</a></li>
+  <li><a href="/eventsreport">Accreditation Report</a></li>
+   <li><a href="/login">Logout</a></li>
+</ul>
+<body background="/static/home.jpg">
+<tr>
+<td><form class="form-horizontal" method="post" action="{{ url_for('db_timetable')}}">		
+<center><h3><p class="pgtophead rti changefont title-header" id="missng">TimeTable Generation</p></h3></center>
+<center>
+	<table width="1000" height="200">
+	<tr>
+	<td width="110">Staff ID</td>
+<td width="267"><input type="text" name="sid"></td></tr>
+		<tr>
+	<td width="200">Name of the staff</td>
+<td width="267"><input type="text" name="name"></td></tr>
+<tr>
+<td width="110">Date</td>
+<td width="267"><input type="tdate" required name="tdate"></td></tr>
+<tr>
+<td width="110">Semester</td>
+<td width="267">
+<select id="ctrSubDropDownLong" class="notranslate" size="1" title="Select Semester" name="dorder">
+ <option value="Semester 1">Semester 1</option>
+            <option value="Semester 2">Semester 2</option>
+            <option value="Semester 3">Semester 3</option>
+            <option value="Semester 4">Semester 4</option>
+            <option value="Semester 5">Semester 5</option>
+            <option value="Semester 6">Semester 6</option>
+            <option value="Semester 7">Semester 7</option>
+            <option value="Semester 8">Semester 8</option>
+	</select>
+
+
+</td></tr>
+<tr>
+<td width="110">University</td>
+<td width="267">
+	<select id="ctrSubDropDownLong" class="notranslate" size="1" title="Select University" name="university">
+ <option value="Bharathiyar University">Bharathiyar University</option>
+	    <option value="University of Madras">University of Madras</option>
+		<option value="Bharathidasan University">Bharathidasan University</option>
+	    <option value="Madurai Kamaraj University">Madurai Kamaraj University</option>
+		<option value="Manonmaniam Sundaranar University">Manonmaniam Sundaranar University</option>
+	    <option value="Periyar University">Periyar University</option>
+		<option value="Annamalai University">Annamalai University</option>
+	    <option value="Alagappa University">Alagappa University</option>
+		 <option value="Mother Teresa Women's University">Mother Teresa Women's University</option>
+	    <option value="Tamil University">Tamil University</option>
+		<option value="Thiruvalluvar University">Thiruvalluvar University</option>
+	    <option value="Tamil Nadu Open University">Tamil Nadu Open University</option>
+		<option value="Tamil Nadu Physical Education and Sports University">Tamil Nadu Physical Education and Sports University</option>
+	    <option value="Tamil Nadu Teachers Education University">Tamil Nadu Teachers Education University</option>
+		<option value="Anna University">Anna University</option>
+	    <option value="Tamil Nadu Agricultural University">Tamil Nadu Agricultural University</option>
+		 <option value="Tamil Nadu Veterinary and Animal Sciences University">Tamil Nadu Veterinary and Animal Sciences University</option>
+	    <option value="Tamil Nadu Dr.Ambedkar Law University">Tamil Nadu Dr.Ambedkar Law University</option>
+		<option value="Tamil Nadu Dr. MGR Medical University">Tamil Nadu Dr. MGR Medical University</option>
+	    <option value="Tamil Nadu Fisheries University">Tamil Nadu Fisheries University</option>
+	</select>
+</td></tr>
+
+
+<tr>
+<td width="110">College</td>
+<td width="267">
+	<select id="ctrSubDropDownLong" class="notranslate" size="1" title="Select College" name="college">
+  <option value="1">A.J.K. College of Arts and Science, Coimbatore</option>
+	    <option value="2">Angappa College of Arts and Science, Coimbatore</option>
+		   <option value="3">Avinashilingam University for Women (Avinashilingam Institute for Home Science and Higher Education for Women), Coimbatore</option>
+	    <option value="4">Bishop Ambrose College, Coimbatore</option>
+		 <option value="5">C.M.S. College of Science and Commerce, Coimbatore</option>
+	    <option value="6">C.S.I. Bishop Appasamy College of Arts and Science, Coimbatore</option>
+		   <option value="7">Cherran College For Women, Tirupur</option>		   
+	    <option value="8">C.B.M. College Sakethapuri, Coimbatore</option>
+		   <option value="9">Chikkanna Government Arts College, Coimbatore</option>
+	    <option value="10">Dr. G.R. Damodaran College of Science, Coimbatore</option>
+		   <option value="11">Dr. N.G.P. Arts and Science College, Coimbatore</option>
+	    <option value="12">Dr. R.V. Arts and Science College, Coimbatore</option>
+		   <option value="13">Dr. S.N.S. Rajalakshmi College of Arts and Science, Coimbatore</option>		   
+	    <option value="14">Govt. Arts College (Autonomous), Coimbatore</option>
+		   <option value="15">Govt. Arts College, Udumalpet</option>
+	    <option value="16">Hindusthan College of Arts and Science, Coimbatore</option>
+		   <option value="17">K.G. College of Arts and Science, Coimbatore</option>
+	    <option value="18">K.S.G. College of Arts and Science, Coimbatore</option>
+		 <option value="19">Kongunadu Arts and Science College, Coimbatore</option>
+		   <option value="20">L.R.G. Govt. Arts College for Women, Tiruppur</option>
+		   		   <option value="21">Maharaja Arts and Science College, Coimbatore</option>
+	    <option value="22">Nallamuthu Gounder Mahalingam College (Autonomous), Pollachi</option>
+			    <option value="23">Nehru College of Arts and Science, Tirupur</option>
+		   <option value="24">Nirmala College for Women, Coimbatore</option>
+		   <option value="25">Pioneer College of Arts and Science, Coimbatore</option>
+		   <option value="26">P.S.G. College of Arts and Science (Autonomous), Coimbatore</option>
+		   <option value="27">P.S.G.R. Krishnamal College for Women, Coimbatore</option>
+	     <option value="28">Sankara College of Science and Commerce, Coimbatore</option>
+			<option value="29">Sri G.V.G. Visalakshi College for Women (Autonomous), Udumalpet</option>
+		   <option value="30">Sri Ramakrishna Mission Vidyalaya College of Arts and Science (Autonomous), Coimbatore</option>
+	    <option value="31">Thavathiru Santhalinga Adigallar Arts and Science, Coimbatore</option>
+	      <option value="32">V.L.B. Janakiammal College of Arts and Science, Coimbatore</option>
+		   
+	</select>
+</td></tr>
+
+<tr>
+<td width="110">Year</td>
+<td width="267">
+	<select id="ctrSubDropDownLong" class="notranslate" size="1" title="Select Year" name="syear">
+ <option value="1st year">1st year</option>
+            <option value="2nd year">2nd year</option>
+            <option value="3rd year">3rd year</option>
+            <option value="4th year">4th year</option>
+            <option value="5th year">5th year</option>
+	</select>
+</td></tr>
+
+
+<tr>
+<td width="110">Subject</td>
+<td width="267"><input type="subject" required name="subject"></td></tr>
+
+<tr>
+<td width="110">Duration</td>
+<td width="267">
+	<input type="shour" required name="shour"></td>
+</td></tr>
+<tr>
+	  <td>&nbsp;</td>
+	  <td>
+<input type="submit" value="submit" name="Submit">&nbsp;<input type="reset" value="clear"/></td>
+	  </tr>
+	  </body>
+</html>

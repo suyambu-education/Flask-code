@@ -1,0 +1,52 @@
+<html>
+<style>
+   h1   {color: black;    font-family: "Times New Roman";    font-size: 160%;}
+   h2   {color: brown;   font-family: "Monotype Corsiva";    font-size: 160%;}
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+fieldset{border:none; width:500px; margin:0px auto;}
+   label{display:inline-block;width:70px; margin-right:20; text-align:left;}
+</style>
+<title>Online Accreditation System</title>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+    <li><a href="/acollege">View College Details</a></li>
+ <li><a href="/staff">Staff Management</a></li>
+    <li><a href="/timetable">Timetable Generation</a></li>
+   <li><a href="/events">Accreditation Details</a></li>
+    <li><a href="/staffreport">Staff Report</a></li>
+  <li><a href="/eventsreport">Accreditation Report</a></li>
+   <li><a href="/login">Logout</a></li>
+</ul>
+<center><b><h2>Staff Report<h2></b></center>
+<body background="/static/home.jpg">
+<table class="table" width =100% border="1">
+
+			
+						<tbody>
+						<tr>
+						<h1><th>ID</th><th>Name</th><th>Gender</th><th>Qualification</th><th>Address</th><th>Mobile No</th><th>Email ID</th><th>Experience & Other Details</th></h1>
+						</tr>
+						{% for staff_id in staff%}
+					<tr>
+					  
+					  <td >{{ staff_id.id}}</td>
+					  <td >{{ staff_id.name}}</td>
+					   <td >{{ staff_id.gender}}</td>
+					     <td >{{ staff_id.adhaar}}</td>
+					       <td >{{ staff_id.address}}</td>
+					         <td >{{ staff_id.mobile}}</td>
+					  
+					  <td >{{ staff_id.email}}</td>
+					  
+					  <td >{{ staff_id.feedback}}</td>
+					  
+									  
+					 </tr>
+				{% endfor %}
+			</tbody>
+			</table>
+</body>
+</html>

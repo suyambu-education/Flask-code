@@ -1,0 +1,29 @@
+<html>
+<style>
+   h1   {color: pink;    font-family: courier;    font-size: 160%;}
+   h2   {color: red;}
+
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+</style>
+<title>Online Accreditation System</title>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+ 
+  <li><a class="active" href="/login">Login</a></li>
+    <li><a href="/college">View College Details</a></li>
+  <li><a href="/vtimetable">View Staff Timetable</a></li>
+  <li><a href="/ctimetable">View College wise Timetable</a></li>
+  <li><a href="/vevents">View Accreditation Details</a></li>
+</ul>
+<body background="/static/home.jpg">
+<tr>
+<td><form method="post" action="/at_reports">		
+<center><h3><p class="pgtophead rti changefont title-header" id="missng">Staffwise Timetable</p></h3><br><br>
+Staff ID:<input type="text" name="cmp_ref_num" ><br><br>
+<button type="submit">View</button><br><br></center></form>
+</td>
+</body>
+</html>

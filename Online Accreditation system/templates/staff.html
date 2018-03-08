@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   h1   {color: pink;    font-family: courier;    font-size: 160%;}
+   h2   {color: red;}
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+</style>
+<head>
+<meta charset="utf-8" />
+<title>Online Accreditation System</title>
+<meta name="generator" content="Geany 1.28" />
+</head>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+    <li><a href="/acollege">View College Details</a></li>
+ <li><a href="/staff">Staff Management</a></li>
+    <li><a href="/timetable">Timetable Generation</a></li>
+   <li><a href="/events">Accreditation Details</a></li>
+    <li><a href="/staffreport">Staff Report</a></li>
+  <li><a href="/eventsreport">Accreditation Report</a></li>
+   <li><a href="/login">Logout</a></li>
+</ul>
+<body background="/static/home.jpg">
+<tr>
+<td><form class="form-horizontal" method="post" action="{{ url_for('db_staff')}}">		
+<center><h3><p class="pgtophead rti changefont title-header" id="missng"> Staff Details</p></h3></center>
+<center>
+	<table width="600" height="200">
+		<tr>
+	<td width="110">Staff Name</td>
+<td width="267"><input type="text" name="name"></td></tr>
+<tr>
+<td width="110">Gender of Staff</td>
+<td width="267">
+	<select id="ctrSubDropDownLong" class="notranslate" size="1" title="Select Gender" name="gender">
+<option value="0">Select Gender</option>
+	<option value="Male">Male</option>
+	<option value="Female">Female</option>
+	</select>
+</td></tr>
+<tr>
+<td width="110">Qualification</td>
+<td width="267"><input type="adhaar" required name="adhaar"></td></tr>
+<tr>
+<td width="110">Address</td>
+<td width="267"><input type="address" required name="address"></td></tr>
+<tr>
+<td width="110">Mobile No</td>
+<td width="267"><input type="mobile" required name="mobile"></td></tr>
+<tr>
+<td width="110">Email ID</td>
+<td width="267"><input type="email" required name="email"></td></tr>
+<td width="367">Experience Details</td>
+<td width="267"><textarea name="feedback" id="feedback" cols="45" rows="5"></textarea></tr>
+<tr>
+	  <td>&nbsp;</td>
+	  <td>
+<input type="submit" value="submit" name="Submit">&nbsp;<input type="reset" value="clear"/></td>
+	  </tr>
+	  </body>
+</html>

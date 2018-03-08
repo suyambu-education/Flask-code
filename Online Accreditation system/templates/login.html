@@ -1,0 +1,40 @@
+<html>
+<style>
+   h1   {color: pink;    font-family: monotype corsiva;    font-size: 160%;}
+   h2   {color: red;}
+   myHero {display: block;      background-color: #dddddd;      padding: 180px;      font-size: 20px;  }  
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+</style>
+<title>Online Accreditation System</title>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+ 
+  <li><a class="active" href="/login">Login</a></li>  
+    <li><a href="/college">View College Details</a></li>
+  <li><a href="/vtimetable">View Staff Timetable</a></li>
+  <li><a href="/ctimetable">View College wise Timetable</a></li>
+  <li><a href="/vevents">View Accreditation Details</a></li>
+</ul>
+
+<body background="/static/home.jpg">
+
+<center><form method="post" action="{{url_for('login_reg')}}">
+<h1>Login Here!...</h1>
+<table width="600" height="200">
+		<tr>
+	<td width=60">Username</td>
+<td width="67"><input type="text" name="user_name"></td></tr>
+<tr>
+<td width="60">
+Password</td><td width="267"><input type="password" name="password"></td>
+<tr>
+<td width="67"><button type="submit">Login</button></td>
+<td width="67"><input type=button onClick="location.href='/vevents'" value='Home'></td></tr>
+</form>
+</center>
+
+</body>
+</html>

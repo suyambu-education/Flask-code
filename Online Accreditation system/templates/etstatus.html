@@ -1,0 +1,52 @@
+<html>
+<style>
+   h1   {color: pink;    font-family: courier;    font-size: 160%;}
+   h2   {color: red;}
+     div  {background: url("/static/2.jpg");   background-size:cover;  background-repeat: no-repeat;}
+   ul    {list-style-type: none;  margin: 0;    padding: 0;    overflow: hidden;    background-color: Maroon;}
+   li     {float: left;}
+   li a  {display: block;  color: white;    text-align: center;    padding: 14px 16px;    text-decoration: none;}
+   li a:hover {background-color: brown;}
+</style>
+<title>Online Accreditation System</title>
+<img src="/static/logo.jpg" width="1335" height="160" >
+<ul>
+ 
+  <li><a class="active" href="/login">Login</a></li>  
+      <li><a href="/college">View College Details</a></li>
+  <li><a href="/vtimetable">View Staff Timetable</a></li>
+  <li><a href="/ctimetable">View College wise Timetable</a></li>
+  <li><a href="/vevents">View Accreditation Details</a></li>
+</ul>
+<body background="/static/home.jpg">
+<tr>
+<td>
+<center><h3><p class="pgtophead rti changefont title-header" id="missng">Collegewise Accreditation</p></h3><br><br>
+</td>
+
+
+<table class="table" width =100% border="1">
+
+			
+					<tbody>
+						<tr>
+						<h1><th>S.No</th><th>Name of Assessed Criteria</th><th>Date of Accreditation</th><th>University</th><th>College</th><th>No of Board Members Assessed</th><th>Accreditation/ Awards/ Achievement Details</th></h1>
+						</tr>
+						{% for college in events%}
+					<tr border="1px">
+					  
+					  <td >{{ college.id}}</td>
+					  <td >{{ college.ename}}</td>
+					   <td >{{ college.edate}}</td>
+					       <td >{{ college.university}}</td>
+					         <td >{{ college.college}}</td>					  
+					  <td >{{ college.syear}}</td>					  
+					     <td >{{ college.edetails}}</td>
+					  
+									  
+					 </tr>
+				{% endfor %}
+			</tbody>
+			</table>
+</body>
+</html>
